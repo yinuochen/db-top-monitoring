@@ -96,7 +96,7 @@ Parameters:
   GitHubRepository:
       Type: String
       Description: AWS Github Repository
-      Default: aws-samples
+      Default: yinuochen
   
   ApplicationUpdateUrl:
       Type: String
@@ -275,7 +275,7 @@ Resources:
                     
                     cd /tmp
                     sudo yum install -y git
-                    git clone https://github.com/${GitHubRepository}/db-top-monitoring.git
+                    git clone -b cognito-removal https://github.com/${GitHubRepository}/db-top-monitoring.git
                     cd db-top-monitoring
                     sudo cp -r server frontend conf /aws/apps
                     
