@@ -312,11 +312,11 @@ async function authenticationElasticacheRedisCluster(req, res) {
 app.post("/api/elasticache/redis/cluster/open/connection/", openConnectionElasticacheRedisCluster);
 async function openConnectionElasticacheRedisCluster(req, res) {
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
         
  
     var params = req.body.params;
@@ -396,12 +396,12 @@ async function openConnectionElasticacheRedisCluster(req, res) {
 app.get("/api/elasticache/redis/cluster/gather/stats/", gatherStatsElasticacheCluster);
 async function gatherStatsElasticacheCluster(req, res) {
     
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -425,12 +425,12 @@ async function gatherStatsElasticacheCluster(req, res) {
 app.get("/api/elasticache/redis/cluster/close/connection/", closeConnectionElasticacheRedisCluster);
 async function closeConnectionElasticacheRedisCluster(req, res) {
         
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -461,11 +461,11 @@ async function closeConnectionElasticacheRedisCluster(req, res) {
 app.post("/api/elasticache/redis/serverless/cluster/authentication/", authenticationElasticacheRedisServerlessCluster);
 async function authenticationElasticacheRedisServerlessCluster(req, res) {
  
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
         
         
     var params = req.body.params;
@@ -500,11 +500,11 @@ async function authenticationElasticacheRedisServerlessCluster(req, res) {
 app.post("/api/elasticache/redis/serverless/cluster/open/connection/", openConnectionElasticacheRedisServerlessCluster);
 async function openConnectionElasticacheRedisServerlessCluster(req, res) {
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
         
  
     var params = req.body.params;
@@ -550,12 +550,12 @@ async function openConnectionElasticacheRedisServerlessCluster(req, res) {
 app.get("/api/elasticache/redis/serverless/cluster/gather/stats/", gatherStatsElasticacheServerlessCluster);
 async function gatherStatsElasticacheServerlessCluster(req, res) {
     
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -578,12 +578,12 @@ async function gatherStatsElasticacheServerlessCluster(req, res) {
 app.get("/api/elasticache/redis/serverless/cluster/gather/analytics/", gatherAnalyticsElasticacheServerlessCluster);
 async function gatherAnalyticsElasticacheServerlessCluster(req, res) {
     
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -605,12 +605,12 @@ async function gatherAnalyticsElasticacheServerlessCluster(req, res) {
 app.get("/api/elasticache/redis/serverless/cluster/close/connection/", closeConnectionElasticacheRedisServerlessCluster);
 async function closeConnectionElasticacheRedisServerlessCluster(req, res) {
         
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -642,11 +642,11 @@ app.post("/api/memorydb/redis/cluster/authentication/", authenticationMemoryDBRe
 async function authenticationMemoryDBRedisCluster(req, res) {
     
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -678,11 +678,11 @@ async function authenticationMemoryDBRedisCluster(req, res) {
 app.post("/api/memorydb/redis/cluster/open/connection/", openConnectionMemoryDBRedisCluster);
 async function openConnectionMemoryDBRedisCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -762,12 +762,12 @@ async function openConnectionMemoryDBRedisCluster(req, res) {
 app.get("/api/memorydb/redis/cluster/gather/stats/", gatherStatsMemoryDBCluster);
 async function gatherStatsMemoryDBCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -791,12 +791,12 @@ async function gatherStatsMemoryDBCluster(req, res) {
 app.get("/api/memorydb/redis/cluster/close/connection/", closeConnectionMemoryDBRedisCluster);
 async function closeConnectionMemoryDBRedisCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -827,11 +827,11 @@ async function closeConnectionMemoryDBRedisCluster(req, res) {
 app.post("/api/documentdb/cluster/authentication/", authenticationDocumentDBCluster);
 async function authenticationDocumentDBCluster(req, res) {
  
-     // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    //  // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     var params = req.body.params;
     var session_id=uuid.v4();
@@ -862,11 +862,11 @@ async function authenticationDocumentDBCluster(req, res) {
 app.post("/api/documentdb/cluster/open/connection/", openConnectionDocumentDBCluster);
 async function openConnectionDocumentDBCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     var params = req.body.params;
     
@@ -942,12 +942,12 @@ async function openConnectionDocumentDBCluster(req, res) {
 app.get("/api/documentdb/cluster/gather/stats/", gatherStatsDocumentDBCluster);
 async function gatherStatsDocumentDBCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -971,12 +971,12 @@ async function gatherStatsDocumentDBCluster(req, res) {
 app.get("/api/documentdb/cluster/close/connection/", closeConnectionDocumentDBCluster);
 async function closeConnectionDocumentDBCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1005,11 +1005,11 @@ async function closeConnectionDocumentDBCluster(req, res) {
 app.post("/api/documentdb/elastic/cluster/authentication/", authenticationDocumentDBElasticCluster);
 async function authenticationDocumentDBElasticCluster(req, res) {
  
-     // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    //  // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     var params = req.body.params;
     var session_id=uuid.v4();
@@ -1040,11 +1040,11 @@ async function authenticationDocumentDBElasticCluster(req, res) {
 app.post("/api/documentdb/elastic/cluster/open/connection/", openConnectionDocumentDBElasticCluster);
 async function openConnectionDocumentDBElasticCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     var params = req.body.params;
     
@@ -1093,12 +1093,12 @@ async function openConnectionDocumentDBElasticCluster(req, res) {
 app.get("/api/documentdb/elastic/cluster/gather/stats/", gatherStatsDocumentDBElasticCluster);
 async function gatherStatsDocumentDBElasticCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1121,12 +1121,12 @@ async function gatherStatsDocumentDBElasticCluster(req, res) {
 app.get("/api/documentdb/elastic/shard/gather/stats/", gatherStatsDocumentDBElasticShard);
 async function gatherStatsDocumentDBElasticShard(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1147,12 +1147,12 @@ async function gatherStatsDocumentDBElasticShard(req, res) {
 app.get("/api/documentdb/elastic/shard/gather/analytics/", gatherDocumentDBElasticShardAnalytics);
 async function gatherDocumentDBElasticShardAnalytics(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1173,12 +1173,12 @@ async function gatherDocumentDBElasticShardAnalytics(req, res) {
 app.get("/api/documentdb/elastic/shard/gather/analytics/details/", gatherDocumentDBElasticShardAnalyticsDetails);
 async function gatherDocumentDBElasticShardAnalyticsDetails(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1198,12 +1198,12 @@ async function gatherDocumentDBElasticShardAnalyticsDetails(req, res) {
 app.get("/api/documentdb/elastic/cluster/close/connection/", closeConnectionDocumentDBElasticCluster);
 async function closeConnectionDocumentDBElasticCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1234,11 +1234,11 @@ async function closeConnectionDocumentDBElasticCluster(req, res) {
 app.post("/api/aurora/cluster/postgresql/authentication/", authenticationAuroraPostgresqlCluster);
 async function authenticationAuroraPostgresqlCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -1270,11 +1270,11 @@ async function authenticationAuroraPostgresqlCluster(req, res) {
 app.post("/api/aurora/cluster/postgresql/open/connection/", openConnectionAuroraPostgresqlCluster);
 async function openConnectionAuroraPostgresqlCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -1343,12 +1343,12 @@ async function openConnectionAuroraPostgresqlCluster(req, res) {
 app.get("/api/aurora/cluster/postgresql/gather/stats/", gatherStatsAuroraPostgresqlCluster);
 async function gatherStatsAuroraPostgresqlCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1373,12 +1373,12 @@ async function gatherStatsAuroraPostgresqlCluster(req, res) {
 app.get("/api/aurora/cluster/postgresql/close/connection/", closeConnectionAuroraPostgresqlCluster);
 async function closeConnectionAuroraPostgresqlCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1408,11 +1408,11 @@ async function closeConnectionAuroraPostgresqlCluster(req, res) {
 app.post("/api/aurora/cluster/postgresql/limitless/authentication/", authenticationAuroraPostgresqlLimitlessCluster);
 async function authenticationAuroraPostgresqlLimitlessCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -1444,11 +1444,11 @@ async function authenticationAuroraPostgresqlLimitlessCluster(req, res) {
 app.post("/api/aurora/cluster/postgresql/limitless/open/connection/", openConnectionAuroraPostgresqlLimitlessCluster);
 async function openConnectionAuroraPostgresqlLimitlessCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -1522,12 +1522,12 @@ async function openConnectionAuroraPostgresqlLimitlessCluster(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/gather/stats/", gatherStatsAuroraPostgresqlLimitlessCluster);
 async function gatherStatsAuroraPostgresqlLimitlessCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1549,12 +1549,12 @@ async function gatherStatsAuroraPostgresqlLimitlessCluster(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/shard/gather/cloudwatch/metrics", gatherClwAuroraPostgresqlLimitlessShard);
 async function gatherClwAuroraPostgresqlLimitlessShard(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1575,12 +1575,12 @@ async function gatherClwAuroraPostgresqlLimitlessShard(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/gather/stats/details", gatherStatsDetailsAuroraPostgresqlLimitlessCluster);
 async function gatherStatsDetailsAuroraPostgresqlLimitlessCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1602,12 +1602,12 @@ async function gatherStatsDetailsAuroraPostgresqlLimitlessCluster(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/shard/gather/cloudwatch/metrics/table", gatherClwAuroraPostgresqlLimitlessTable);
 async function gatherClwAuroraPostgresqlLimitlessTable(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1629,12 +1629,12 @@ async function gatherClwAuroraPostgresqlLimitlessTable(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/gather/storage/info", gatherAuroraPostgresqlLimitlessStorageInfo);
 async function gatherAuroraPostgresqlLimitlessStorageInfo(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -1655,12 +1655,12 @@ async function gatherAuroraPostgresqlLimitlessStorageInfo(req, res) {
 app.get("/api/aurora/cluster/postgresql/limitless/close/connection/", closeConnectionAuroraPostgresqlLimitlessCluster);
 async function closeConnectionAuroraPostgresqlLimitlessCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1688,11 +1688,11 @@ async function closeConnectionAuroraPostgresqlLimitlessCluster(req, res) {
 app.post("/api/aurora/cluster/mysql/authentication/", authenticationAuroraMysqlCluster);
 async function authenticationAuroraMysqlCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
  
     var params = req.body.params;
@@ -1724,11 +1724,11 @@ async function authenticationAuroraMysqlCluster(req, res) {
 app.post("/api/aurora/cluster/mysql/open/connection/", openConnectionAuroraMysqlCluster);
 async function openConnectionAuroraMysqlCluster(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     var params = req.body.params;
     
@@ -1796,12 +1796,12 @@ async function openConnectionAuroraMysqlCluster(req, res) {
 app.get("/api/aurora/cluster/mysql/gather/stats/", gatherStatsAuroraMysqlCluster);
 async function gatherStatsAuroraMysqlCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1825,12 +1825,12 @@ async function gatherStatsAuroraMysqlCluster(req, res) {
 app.get("/api/aurora/cluster/mysql/close/connection/", closeConnectionAuroraMysqlCluster);
 async function closeConnectionAuroraMysqlCluster(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -1861,11 +1861,11 @@ async function closeConnectionAuroraMysqlCluster(req, res) {
 app.post("/api/rds/instance/mysql/authentication/", authenticationRdsMysqlInstance);
 async function authenticationRdsMysqlInstance(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
  
     var params = req.body.params;
@@ -1960,12 +1960,12 @@ async function authenticationRdsMysqlInstance(req, res) {
 app.get("/api/rds/instance/mysql/execute/query/", executeQueryRdsMysqlInstance);
 async function executeQueryRdsMysqlInstance(req, res) {
 
-    // Token Validation
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
     var params = req.query;
@@ -1993,12 +1993,12 @@ async function executeQueryRdsMysqlInstance(req, res) {
 app.get("/api/rds/instance/mysql/gather/stats/", gatherStatsRdsMysqlInstance);
 async function gatherStatsRdsMysqlInstance(req, res) {
  
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
         
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -2023,12 +2023,12 @@ async function gatherStatsRdsMysqlInstance(req, res) {
 app.get("/api/rds/instance/mysql/close/connection/", closeConnectionRdsMysqlInstance);
 async function closeConnectionRdsMysqlInstance(req, res) {
  
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
         
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -2058,11 +2058,11 @@ async function closeConnectionRdsMysqlInstance(req, res) {
 app.post("/api/rds/instance/postgresql/authentication/", authenticationRdsPostgresqlInstance);
 async function authenticationRdsPostgresqlInstance(req, res) {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     var params = req.body.params;
     var session_id=uuid.v4();
@@ -2156,12 +2156,12 @@ async function authenticationRdsPostgresqlInstance(req, res) {
 app.get("/api/rds/instance/postgresql/execute/query/", executeQueryRdsPostgresqlInstance);
 async function executeQueryRdsPostgresqlInstance(req, res) {
 
-    // Token Validation
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
     var params = req.query;
     
@@ -2188,12 +2188,12 @@ async function executeQueryRdsPostgresqlInstance(req, res) {
 app.get("/api/rds/instance/postgresql/gather/stats/", gatherStatsRdsPostgresqlInstance);
 async function gatherStatsRdsPostgresqlInstance(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -2218,12 +2218,12 @@ async function gatherStatsRdsPostgresqlInstance(req, res) {
 app.get("/api/rds/instance/postgresql/close/connection/", closeConnectionRdsPostgresqlInstance);
 async function closeConnectionRdsPostgresqlInstance(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
  
         try
             {
@@ -2253,11 +2253,11 @@ async function closeConnectionRdsPostgresqlInstance(req, res) {
 app.post("/api/rds/instance/sqlserver/authentication/", authenticationRdsSqlserverInstance);
 async function authenticationRdsSqlserverInstance(req, res) {
  
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
     
     
     var params = req.body.params;
@@ -2377,12 +2377,12 @@ async function executeQueryRdsSqlserverInstance(req, res) {
 app.get("/api/rds/instance/sqlserver/gather/stats/", gatherStatsRdsSqlserverInstance);
 async function gatherStatsRdsSqlserverInstance(req, res) {
  
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
         
         
         try
@@ -2408,12 +2408,12 @@ async function gatherStatsRdsSqlserverInstance(req, res) {
 app.get("/api/rds/instance/sqlserver/close/connection/", closeConnectionRdsSqlserverInstance);
 async function closeConnectionRdsSqlserverInstance(req, res) {
  
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
             
             
         try
@@ -2444,11 +2444,11 @@ async function closeConnectionRdsSqlserverInstance(req, res) {
 app.post("/api/rds/instance/oracle/authentication/", authenticationRdsOracleInstance);
 async function authenticationRdsOracleInstance(req, res) {
  
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
 
     var params = req.body.params;
@@ -2540,12 +2540,12 @@ async function authenticationRdsOracleInstance(req, res) {
 app.get("/api/rds/instance/oracle/execute/query/", executeQueryRdsOracleInstance);
 async function executeQueryRdsOracleInstance(req, res) {
  
-    // Token Validation
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
             
     var params = req.query;
@@ -2573,12 +2573,12 @@ async function executeQueryRdsOracleInstance(req, res) {
 app.get("/api/rds/instance/oracle/gather/stats/", gatherStatsRdsOracleInstance);
 async function gatherStatsRdsOracleInstance(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
  
         try
@@ -2604,12 +2604,12 @@ async function gatherStatsRdsOracleInstance(req, res) {
 app.get("/api/rds/instance/oracle/close/connection/", closeConnectionRdsOracleInstance);
 async function closeConnectionRdsOracleInstance(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -2637,11 +2637,11 @@ async function closeConnectionRdsOracleInstance(req, res) {
 app.post("/api/dynamodb/authentication/", authenticationDynamoDB);
 async function authenticationDynamoDB(req, res) {
  
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
         
     var session_id=uuid.v4();
     var token = generateToken({ session_id: session_id});
@@ -2664,11 +2664,11 @@ async function authenticationDynamoDB(req, res) {
 app.post("/api/dynamodb/open/connection/", openConnectionDynamoDB);
 async function openConnectionDynamoDB(req, res) {
  
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
        
  
     var params = req.body.params;
@@ -2715,12 +2715,12 @@ async function openConnectionDynamoDB(req, res) {
 app.get("/api/dynamodb/gather/stats/", gatherStatsDynamoDB);
 async function gatherStatsDynamoDB(req, res) {
     
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -2742,12 +2742,12 @@ async function gatherStatsDynamoDB(req, res) {
 app.get("/api/dynamodb/gather/index/stats/", gatherIndexStatsDynamoDB);
 async function gatherIndexStatsDynamoDB(req, res) {
     
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -2769,12 +2769,12 @@ async function gatherIndexStatsDynamoDB(req, res) {
 app.get("/api/dynamodb/close/connection/", closeConnectionDynamoDB);
 async function closeConnectionDynamoDB(req, res) {
 
-        // Token Validation
-        var standardToken = verifyToken(req.headers['x-token']);
-        var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+        // // Token Validation
+        // var standardToken = verifyToken(req.headers['x-token']);
+        // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-        if (standardToken.isValid === false || cognitoToken.isValid === false)
-            return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+        // if (standardToken.isValid === false || cognitoToken.isValid === false)
+        //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
         try
             {
@@ -2800,11 +2800,11 @@ async function closeConnectionDynamoDB(req, res) {
 //--## AWS : List Aurora Clusters
 app.get("/api/aws/aurora/cluster/region/list/", async (req,res)=>{
    
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     // API Call
     var params = {
@@ -2827,11 +2827,11 @@ app.get("/api/aws/aurora/cluster/region/list/", async (req,res)=>{
 //--## AWS : List RDS Instances
 app.get("/api/aws/aurora/cluster/region/endpoints/", async (req,res)=>{
    
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     // API Call
     var paramsQuery = req.query;
@@ -2864,11 +2864,11 @@ app.get("/api/aws/aurora/cluster/region/endpoints/", async (req,res)=>{
 //-## AWS : List RDS Instances
 app.get("/api/aws/rds/instance/region/list/", async (req,res)=>{
    
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     // API Call
     var params = {
@@ -2895,11 +2895,11 @@ app.get("/api/aws/rds/instance/region/list/", async (req,res)=>{
 //--## AWS : Cloudwatch Information
 app.get("/api/aws/clw/query/", async (req,res)=>{
     
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
     try {
             
@@ -2929,11 +2929,11 @@ app.get("/api/aws/clw/query/", async (req,res)=>{
 //--## AWS : Cloudwatch Information
 app.get("/api/aws/clw/region/query/", async (req,res)=>{
 
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
     try {
         
@@ -2964,11 +2964,11 @@ app.get("/api/aws/clw/region/query/", async (req,res)=>{
 //--## AWS : Cloudwatch Information
 app.get("/api/aws/clw/region/logs/", async (req,res)=>{
     
-    var standardToken = verifyToken(req.headers['x-token']);
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // var standardToken = verifyToken(req.headers['x-token']);
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (standardToken.isValid === false || cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
+    // if (standardToken.isValid === false || cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid. StandardToken : " + String(standardToken.isValid) + ", CognitoToken : " + String(cognitoToken.isValid) });
 
     
     try {
@@ -3000,11 +3000,11 @@ app.get("/api/aws/clw/region/logs/", async (req,res)=>{
 app.get("/api/aws/region/elasticache/cluster/nodes/", async (req,res)=>{
 
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
 
     var params = req.query;
@@ -3032,11 +3032,11 @@ app.get("/api/aws/region/elasticache/cluster/nodes/", async (req,res)=>{
 app.get("/api/aws/region/elasticache/serverless/cluster/", async (req,res)=>{
 
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     var parameter = {
       MaxResults: 100
@@ -3061,11 +3061,11 @@ app.get("/api/aws/region/elasticache/serverless/cluster/", async (req,res)=>{
 app.get("/api/aws/region/memorydb/cluster/nodes/", async (req,res)=>{
     
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
 
     var params = req.query;
@@ -3096,11 +3096,11 @@ app.get("/api/aws/region/memorydb/cluster/nodes/", async (req,res)=>{
 //--## AWS : DocumentDB List clusters - by Region
 app.get("/api/aws/docdb/cluster/region/list/", async (req,res)=>{
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     var paramsQuery = req.query;
     
@@ -3138,11 +3138,11 @@ app.get("/api/aws/docdb/cluster/region/list/", async (req,res)=>{
 //--## AWS : DynamoDB list tables
 app.get("/api/aws/region/dynamodb/tables/", async (req,res)=>{
     
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
 
     var parameter = {};
@@ -3166,11 +3166,11 @@ app.get("/api/aws/region/dynamodb/tables/", async (req,res)=>{
 // AWS : DynamoDB list tables with details
 app.get("/api/aws/region/dynamodb/tables/details/", async (req,res)=>{
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
     
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
 
     try {
         
@@ -3216,11 +3216,11 @@ app.get("/api/aws/region/dynamodb/tables/details/", async (req,res)=>{
 //--++ API : GENERAL : Application Update - Start
 app.get("/api/aws/application/update/start", async (req, res) => {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     
     try {
@@ -3239,11 +3239,11 @@ app.get("/api/aws/application/update/start", async (req, res) => {
 //--++ API : GENERAL : Application Update - Status
 app.get("/api/aws/application/update/status", async (req, res) => {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     try {
         
@@ -3261,11 +3261,11 @@ app.get("/api/aws/application/update/status", async (req, res) => {
 //--++ API : GENERAL : List Connections
 app.get("/api/aws/engines/connections/list", async (req, res) => {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
         
     
     var connections = [];
@@ -3343,11 +3343,11 @@ app.get("/api/aws/engines/connections/list", async (req, res) => {
 //--++ API : GENERAL : Release Connection
 app.get("/api/aws/engines/connections/terminate", async (req, res) => {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
     
     var params = req.query;
     
@@ -3412,11 +3412,11 @@ app.get("/api/aws/engines/connections/terminate", async (req, res) => {
 //--++ API : GENERAL : Get Recommendations
 app.get("/api/aws/application/recommendation/get", async (req, res) => {
 
-    // Token Validation
-    var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
+    // // Token Validation
+    // var cognitoToken = verifyTokenCognito(req.headers['x-token-cognito']);
 
-    if (cognitoToken.isValid === false)
-        return res.status(511).send({ data: [], message : "Token is invalid"});
+    // if (cognitoToken.isValid === false)
+    //     return res.status(511).send({ data: [], message : "Token is invalid"});
  
     var params = req.query;
     
